@@ -4,20 +4,12 @@ using Unit05_cycle.Game.Services;
 
 namespace Unit05_cycle.Game.Scripting
 {
-    /// <summary>
-    /// <para>An input action that controls player two's bike.</para>
-    /// <para>
-    /// The responsibility of ControlActorsAction is to get the direction and move player two's bike.
-    /// </para>
-    /// </summary>
+    
     public class ControlCycleTwoAction : Action
     {
         private KeyboardService keyboardService;
         private Point direction = new Point(Constants.CELL_SIZE, 0);
 
-        /// <summary>
-        /// Constructs a new instance of ControlActorsAction using the given KeyboardService.
-        /// </summary>
         public ControlCycleTwoAction(KeyboardService keyboardService)
         {
             this.keyboardService = keyboardService;

@@ -4,12 +4,7 @@ using Unit05_cycle.Game.Casting;
 
 namespace Unit05_cycle.Game
 {
-    /// <summary>
-    /// <para>The settings for the game</para>
-    /// <para>
-    /// The responsibility of Constants is to keep track of the size of the game window and the settings for the game. 
-    /// </para>
-    /// </summary>
+    
     public class Constants
     {
         public static int COLUMNS = 40;

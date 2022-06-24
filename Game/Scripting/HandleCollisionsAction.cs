@@ -7,22 +7,14 @@ using Unit05_cycle.Game.Services;
 
 namespace Unit05_cycle.Game.Scripting
 {
-    /// <summary>
-    /// <para>An update action that handles interactions between the actors.</para>
-    /// <para>
-    /// The responsibility of HandleCollisionsAction is to handle the situation when the bikes' light ribbons grow,
-    /// or the bikes collide with each other, or the game is over.
-    /// </para>
-    /// </summary>
+   
     public class HandleCollisionsAction : Action
     {
         private bool isGameOver = false;
         private bool CycleOneLoose = false;
         private bool CycleTwoLoose = false;
         private int counter = 0;
-        /// <summary>
-        /// Constructs a new instance of HandleCollisionsAction.
-        /// </summary>
+        
         public HandleCollisionsAction()
         {
         }
@@ -38,9 +30,7 @@ namespace Unit05_cycle.Game.Scripting
             }
         }
 
-        /// <summary>
-        /// Updates the score and size of the bikes' light ribbons. 
-        /// </summary>
+        
         /// <param name="cast">The cast of actors.</param>
         private void HandleGrowth(Cast cast)
         {
@@ -58,9 +48,7 @@ namespace Unit05_cycle.Game.Scripting
 
         }
 
-        /// <summary>
-        /// Sets the game over flag if the bikes collide.
-        /// </summary>
+        
         /// <param name="cast">The cast of actors.</param>
         private void HandleSegmentCollisions(Cast cast)
         {
@@ -114,17 +102,6 @@ namespace Unit05_cycle.Game.Scripting
                 CycleTwo cycletwo = (CycleTwo)cast.GetFirstActor("cycletwo");
                 List<Actor> segments2 = cycletwo.GetSegments();
 
-                // create a "game over" message
-                //int x = Constants.MAX_X / 2;
-                //int y = Constants.MAX_Y / 2;
-                //Point position = new Point(x, y);
-
-                //Actor message = new Actor();
-                //message.SetText("Game Over!");
-                //message.SetPosition(position);
-                //cast.AddActor("messages", message);
-
-                // decide the color of the game over screen and the losing cycle
                 if(CycleOneLoose == true)
                 {
                     foreach (Actor segment in segments1)

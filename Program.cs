@@ -6,15 +6,9 @@ using Unit05_cycle.Game.Services;
 
 namespace Unit05_cycle
 {
-    /// <summary>
-    /// The program's entry point.
-    /// </summary>
+    
     class Program
     {
-        /// <summary>
-        /// Starts the program using the given arguments.
-        /// </summary>
-        /// <param name="args">The given arguments.</param>
         static void Main(string[] args)
         {
             // create the cast
